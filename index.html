@@ -15,82 +15,114 @@
             font-family: sans-serif;
         }
 
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
         .main {
             min-height: 80vh;
+            display: flex;
             flex-direction: column;
             background-color: #FF5200;
             position: relative;
             overflow: hidden;
+            padding-bottom: 40px;
         }
 
         header {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            height: 15vh;
+            min-height: 12vh;
+            padding: 15px clamp(15px, 4vw, 50px);
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        header>img {
-            height: 48px;
-            width: 164px;
+        header > img {
+            height: clamp(36px, 4vw, 48px);
+            width: auto;
+            object-fit: contain;
         }
 
-        header>nav>.nav-sec>a {
+        .nav-sec {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 2vw, 25px);
+            flex-wrap: wrap;
+        }
+
+        .nav-sec > a {
             text-decoration: none;
             color: white;
             font-weight: 600;
-            font-size: 16px;
-            margin-right: 30px;
+            font-size: clamp(13px, 1.2vw, 16px);
+            white-space: nowrap;
         }
 
         #getapp {
             text-align: center;
-            height: 55px;
-            width: 175px;
-            margin-right: 30px;
+            height: 48px;
+            padding: 0 20px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: clamp(13px, 1.2vw, 15px);
             border: 1px solid white;
             color: white;
-            background-color: #FF5200;
+            background-color: transparent;
             border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
         }
 
         #signin {
             text-align: center;
-            height: 55px;
-            width: 125px;
-            text-decoration: none;
+            height: 48px;
+            padding: 0 24px;
             color: white;
-            font-weight: 800;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: clamp(13px, 1.2vw, 15px);
             background-color: black;
             border-radius: 20px;
             border: none;
+            cursor: pointer;
+            white-space: nowrap;
         }
 
         .hero {
             display: flex;
             width: 100%;
             justify-content: space-between;
-            align-items: start;
-            padding: 20px 0;
+            align-items: center;
+            padding: 20px clamp(10px, 2vw, 30px);
+            position: relative;
         }
 
-        .hero>.input {
-            margin-top: 40px;
+        #li, #ri {
+            height: clamp(220px, 32vw, 420px);
+            width: auto;
+            object-fit: contain;
+            flex-shrink: 1;
+        }
+
+        .hero > .input {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             color: white;
+            flex: 1;
+            max-width: 650px;
+            margin: 10px 15px;
+            z-index: 2;
         }
 
-        .hero>.input>.about {
+        .hero > .input > .about {
             text-align: center;
-            font-weight: 600;
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: clamp(24px, 3.2vw, 44px);
+            margin-bottom: 25px;
+            line-height: 1.2;
         }
 
         span {
@@ -99,134 +131,130 @@
 
         .place {
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            width: 100%;
+            max-width: 620px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .hero>.input>.place>.icon-place {
+        .hero > .input > .place > .icon-place {
             display: flex;
-            height: 59px;
-            width: 294px;
-            border-radius: 10px;
-            padding-left: 20px;
+            align-items: center;
+            height: 54px;
+            flex: 1 1 220px;
+            border-radius: 12px;
             background-color: white;
-            padding: 20px;
+            padding: 0 15px;
             position: relative;
         }
 
-        .hero>.input>.place>.icon-place>i {
-            height: 100%;
-            width: 10%;
+        .hero > .input > .place > .icon-place > i {
             color: #FF5200;
-            padding-right: 10px;
-            position: absolute;
+            font-size: 16px;
         }
 
-        .hero>.input>.place>.icon-place>select {
+        .hero > .input > .place > .icon-place > select {
             height: 100%;
-            width: 90%;
+            width: 100%;
             border: none;
-            padding-left: 20px;
-            margin-left: 10px;
-            color: #AFB0B2;
+            padding-left: 10px;
+            color: #333;
+            outline: none;
+            background: transparent;
+            font-size: 13px;
         }
 
-        .hero>.input>.place>.icon-input {
+        .hero > .input > .place > .icon-input {
             display: flex;
-            justify-content: space-evenly;
-            height: 59px;
-            width: 488px;
-            border-radius: 10px;
-            border: none;
-            padding-left: 20px;
+            align-items: center;
+            height: 54px;
+            flex: 1.5 1 260px;
+            border-radius: 12px;
             background-color: white;
+            padding: 0 15px;
             position: relative;
         }
 
-        .hero>.input>.place>.icon-input>input {
+        .hero > .input > .place > .icon-input > input {
             height: 100%;
-            width: 85%;
+            width: 100%;
             border: none;
-            color: #AFB0B2;
-            position: absolute;
+            color: #333;
+            outline: none;
+            font-size: 13px;
         }
 
-        .hero>.input>.place>.icon-input>i {
-            height: 100%;
-            width: 15%;
-            color: #AFB0B2;
-            padding-left: 200px;
-            padding-top: 20px;
-            position: absolute;
+        .hero > .input > .place > .icon-input > i {
+            color: #888;
+            font-size: 16px;
         }
 
-        #li {
-            height: 450px;
-            width: auto;
-        }
-
-        #ri {
-            height: 450px;
-            width: auto;
-        }
-
-        .main>.food-card {
+        .food-card {
             display: flex;
             justify-content: center;
-            gap: 25px;
-            margin: -170px auto 20px auto;
-            width: 100%;
+            gap: clamp(12px, 2vw, 25px);
+            margin: 20px auto;
+            width: 92%;
+            max-width: 1100px;
+            flex-wrap: wrap;
+            z-index: 2;
         }
 
-        .main>.food-card>.main-card {
-            margin-top: -10px;
-            width: 308px;
-            height: 308px;
-            border-radius: 10px;
+        .food-card > .main-card {
+            flex: 1 1 260px;
+            max-width: 330px;
+            aspect-ratio: 1 / 1;
+            border-radius: 14px;
+            overflow: hidden;
         }
 
-        .main>.food-card>.main-card>img {
+        .food-card > .main-card > img {
             height: 100%;
             width: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .bar {
-            height: 16px;
-            width: 1065px;
+            height: 12px;
+            width: min(92%, 1065px);
             background-color: white;
-            margin: 10px auto 20px auto;
+            margin: 20px auto 10px auto;
+            border-radius: 6px;
         }
 
-        .order-food {
-            margin: 100px auto 0 auto;
-            height: 70vh;
+        .order-food, .instamart-section, .dineout, .cities-section {
+            margin: 60px auto 0 auto;
+            width: min(92%, 1076px);
             display: flex;
             flex-direction: column;
-            width: 1076px;
         }
 
-        .order-food>.des {
-            font-size: 24px;
+        .order-food > .des, .instamart-section > .des, .dineout > .des, .cities-section > .des {
+            font-size: clamp(20px, 2.2vw, 26px);
             font-weight: 800;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #02060c;
         }
 
-        .food {
+        .food, .grocery, .hotel {
             display: flex;
             flex-direction: column;
-            overflow-x: scroll;
-            gap: 20px;
+            overflow-x: auto;
             width: 100%;
+            padding-bottom: 15px;
+            scrollbar-width: none;
         }
 
-        ::-webkit-scrollbar {
+        .food::-webkit-scrollbar, .grocery::-webkit-scrollbar, .hotel::-webkit-scrollbar {
             display: none;
         }
 
-        .menu-row {
+        .menu-row, .row, .grocery-row {
             display: flex;
-            gap: 47px;
-            width: 1750px;
+            gap: 20px;
+            width: max-content;
         }
 
         .food-item {
@@ -234,61 +262,14 @@
             height: 180px;
             background-size: cover;
             background-position: center;
-        }
-
-        .dish1 { background-image: url('./swiggy/dish1.png'); }
-        .dish2 { background-image: url('./swiggy/dish2.png'); }
-        .dish3 { background-image: url('./swiggy/dish3.png'); }
-        .dish4 { background-image: url('./swiggy/dish4.png'); }
-        .dish5 { background-image: url('./swiggy/dish5.png'); }
-        .dish6 { background-image: url('./swiggy/dish6.png'); }
-        .dish7 { background-image: url('./swiggy/dish7.png'); }
-        .dish8 { background-image: url('./swiggy/dish8.png'); }
-        .dish9 { background-image: url('./swiggy/dish9.png'); }
-        .dish10 { background-image: url('./swiggy/dish10.png'); }
-        .dish11 { background-image: url('./swiggy/dish11.png'); }
-        .dish12 { background-image: url('./swiggy/dish12.png'); }
-        .dish13 { background-image: url('./swiggy/dish13.png'); }
-        .dish14 { background-image: url('./swiggy/dish14.png'); }
-        .dish15 { background-image: url('./swiggy/dish15.png'); }
-        .dish16 { background-image: url('./swiggy/dish16.png'); }
-        .dish17 { background-image: url('./swiggy/dish17.png'); }
-        .dish18 { background-image: url('./swiggy/dish18.png'); }
-        .dish19 { background-image: url('./swiggy/dish19.png'); }
-        .dish20 { background-image: url('./swiggy/dish20.png'); }
-
-        .instamart-section {
-            margin: 20px auto 0px auto;
-            width: 1076px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .instamart-section>.des {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #02060c;
-        }
-
-        .grocery {
-            display: flex;
-            flex-direction: column;
-            overflow-x: scroll;
-            width: 100%;
-            padding-bottom: 15px;
-        }
-
-        .grocery-row {
-            display: flex;
-            gap: 37px;
-            width: max-content;
+            flex-shrink: 0;
         }
 
         .grocery-card {
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .grocery-item {
@@ -299,261 +280,93 @@
             border-radius: 20px;
         }
 
-        .grocery1 { background-image: url('./swiggy/grocery1.png'); }
-        .grocery2 { background-image: url('./swiggy/grocery2.png'); }
-        .grocery3 { background-image: url('./swiggy/grocery3.png'); }
-        .grocery4 { background-image: url('./swiggy/grocery4.png'); }
-        .grocery5 { background-image: url('./swiggy/grocery5.png'); }
-        .grocery6 { background-image: url('./swiggy/grocery6.png'); }
-        .grocery7 { background-image: url('./swiggy/grocery7.png'); }
-        .grocery8 { background-image: url('./swiggy/grocery8.png'); }
-        .grocery9 { background-image: url('./swiggy/grocery9.png'); }
-        .grocery10 { background-image: url('./swiggy/grocery10.png'); }
-        .grocery11 { background-image: url('./swiggy/grocery11.png'); }
-        .grocery12 { background-image: url('./swiggy/grocery12.png'); }
-        .grocery13 { background-image: url('./swiggy/grocery13.png'); }
-        .grocery14 { background-image: url('./swiggy/grocery14.png'); }
-        .grocery15 { background-image: url('./swiggy/grocery15.png'); }
-        .grocery16 { background-image: url('./swiggy/grocery16.png'); }
-        .grocery17 { background-image: url('./swiggy/grocery17.png'); }
-        .grocery18 { background-image: url('./swiggy/grocery18.png'); }
-        .grocery19 { background-image: url('./swiggy/grocery19.png'); }
-        .grocery20 { background-image: url('./swiggy/grocery20.png'); }
-        .grocery21 { background-image: url('./swiggy/grocery21.png'); }
-        .grocery22 { background-image: url('./swiggy/grocery22.png'); }
-        .grocery23 { background-image: url('./swiggy/grocery23.png'); }
-        .grocery24 { background-image: url('./swiggy/grocery24.png'); }
-
-        .grocery-hotel-name {
-            margin-top: 10px;
-            font-size: 15px;
-            font-weight: 600;
-            color: #02060c;
-            text-align: center;
-            max-width: 145px;
-        }
-
-        .dineout {
-            margin: 90px auto 50px auto;
-            width: 1076px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .dineout>.des {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #02060c;
-        }
-
-        .hotel {
-            display: flex;
-            flex-direction: column;
-            overflow-x: scroll;
-            width: 100%;
-            padding-bottom: 15px;
-        }
-
-        .row {
-            display: flex;
-            gap: 25px;
-            width: 2090px;
-        }
-
         .card {
-            width: 370px;
+            width: 340px;
             background: #ffffff;
             border-radius: 24px;
             border: 1px solid rgb(216, 207, 207);
             overflow: hidden;
             display: flex;
             flex-direction: column;
-        }
-
-        .card-img {
-            width: 100%;
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            padding: 16px;
-        }
-
-        .d1 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine1.png'); }
-        .d2 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine2.png'); }
-        .d3 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine3.png'); }
-        .d4 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine4.png'); }
-        .d5 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine5.png'); }
-        .d6 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.22)), url('./swiggy/dine6.png'); }
-
-        .hotel-review {
-            display: flex;
-            justify-content: space-between;
-            align-items: end;
-            width: 100%;
-            color: white;
-        }
-
-        .hotel-name {
-            font-size: 20px;
-            font-weight: 800;
-            white-space: nowrap;
-            color: white;
-        }
-
-        .rating {
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 8px;
-            background-color: #1ba672;
-        }
-
-        .details {
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            color: #686b78;
-        }
-
-        .hotel-location {
-            font-size: 14px;
-            color: #686b78;
-            margin-bottom: 6px;
-        }
-
-        .offer {
-            background-color: #e3f8f1;
-            color: #63b89a;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 10px 12px;
-            border-radius: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .bank-offer {
-            background-color: #e6fcf5;
-            color: #0ca678;
-            font-size: 13px;
-            font-weight: 700;
-            padding: 10px 12px;
-            border-radius: 12px;
-        }
-
-        .extra {
-            font-size: 12px;
-            color: #535665;
-            font-weight: 600;
-            margin-top: 5px;
+            flex-shrink: 0;
         }
 
         .app-banner {
-            margin: 20px auto 50px auto;
-            width: 1076px;
-            height: 200px;
+            margin: 40px auto;
+            width: min(92%, 1076px);
+            height: 180px;
             background-size: cover;
             background-position: center;
+            border-radius: 16px;
             background-image: url('./swiggy/dowmload.png');
-        }
-
-        .cities-section {
-            margin: 20px auto 50px auto;
-            width: 1065px;
-            display: flex;
-            flex-direction: column;
-            padding: 40px 0;
-        }
-
-        .cities-section>.des {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #02060c;
         }
 
         .cities-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            width: 100%;
         }
 
         .city-food {
-            height: 60px;
+            min-height: 56px;
             border: 1px solid #d4d5d9;
             border-radius: 12px;
-            text-align: center;
-            padding: 20px 15px;
-            font-size: 14px;
-            font-weight: 400;
-            color: #3d4152;
-        }
-
-        .show-more-box {
-            color: #ff5200;
-            font-weight: 700;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 12px;
+            font-size: 14px;
+            color: #3d4152;
+            text-align: center;
         }
 
         footer {
-            height: 70vh;
+            min-height: 60vh;
             background-color: #F0F0F5;
-        }
-
-        footer>.link {
+            padding: 40px 20px;
             display: flex;
-            height: 75%;
-            padding: 0px 60px;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        footer > .link {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
-            align-items: center;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
         }
 
-        footer>.link>.doc>a {
-            text-decoration: none;
-            color: #616469;
-        }
-
-        footer>.footer-separator {
-            height: 2px;
-            width: 1000px;
-            background-color: black;
+        footer > .footer-separator {
+            height: 1px;
+            width: min(92%, 1000px);
+            background-color: #ccc;
             margin: auto;
         }
 
-        footer>.store {
-            height: 25%;
+        footer > .store {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-        }
-
-        footer>.store>.box1 {
-            font-size: 18px;
-            font-weight: 600;
-            padding-right: 20px;
-        }
-
-        footer>.store>.box2 {
-            display: flex;
-            justify-content: center;
             gap: 20px;
-            align-items: center;
+            text-align: center;
+        }
+
+        /* Responsive Breakpoint for Mobile/Tablet */
+        @media (max-width: 850px) {
+            #li, #ri {
+                display: none;
+            }
+            .hero {
+                justify-content: center;
+            }
         }
     </style>
+
 </head>
 
 <body>
