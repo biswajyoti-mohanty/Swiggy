@@ -12,21 +12,22 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
             overflow-x: hidden;
             width: 100%;
+            background-color: #fff;
         }
 
+        /* --- HERO & HEADER SECTION --- */
         .main {
-            min-height: 80vh;
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             background-color: #FF5200;
             position: relative;
-            overflow: hidden;
             padding-bottom: 40px;
         }
 
@@ -34,14 +35,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            min-height: 12vh;
-            padding: 15px clamp(15px, 4vw, 50px);
+            min-height: 80px;
+            padding: 15px clamp(20px, 5vw, 60px);
             gap: 15px;
             flex-wrap: wrap;
         }
 
         header > img {
-            height: clamp(36px, 4vw, 48px);
+            height: clamp(38px, 4vw, 50px);
             width: auto;
             object-fit: contain;
         }
@@ -49,7 +50,7 @@
         .nav-sec {
             display: flex;
             align-items: center;
-            gap: clamp(10px, 2vw, 25px);
+            gap: clamp(12px, 2vw, 28px);
             flex-wrap: wrap;
         }
 
@@ -94,13 +95,14 @@
             width: 100%;
             justify-content: space-between;
             align-items: center;
-            padding: 20px clamp(10px, 2vw, 30px);
+            padding: 10px clamp(10px, 3vw, 40px);
             position: relative;
+            flex: 1;
         }
 
         #li, #ri {
-            height: clamp(220px, 32vw, 420px);
-            width: auto;
+            height: clamp(200px, 30vw, 420px);
+            max-width: 28%;
             object-fit: contain;
             flex-shrink: 1;
         }
@@ -113,16 +115,16 @@
             color: white;
             flex: 1;
             max-width: 650px;
-            margin: 10px 15px;
+            margin: 10px auto;
             z-index: 2;
         }
 
         .hero > .input > .about {
             text-align: center;
-            font-weight: 700;
-            font-size: clamp(24px, 3.2vw, 44px);
+            font-weight: 800;
+            font-size: clamp(22px, 3.2vw, 44px);
             margin-bottom: 25px;
-            line-height: 1.2;
+            line-height: 1.25;
         }
 
         span {
@@ -133,7 +135,7 @@
             display: flex;
             gap: 12px;
             width: 100%;
-            max-width: 620px;
+            max-width: 650px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -141,39 +143,39 @@
         .hero > .input > .place > .icon-place {
             display: flex;
             align-items: center;
-            height: 54px;
-            flex: 1 1 220px;
-            border-radius: 12px;
+            height: 56px;
+            flex: 1 1 230px;
+            border-radius: 14px;
             background-color: white;
-            padding: 0 15px;
-            position: relative;
+            padding: 0 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .hero > .input > .place > .icon-place > i {
             color: #FF5200;
-            font-size: 16px;
+            font-size: 18px;
+            margin-right: 10px;
         }
 
         .hero > .input > .place > .icon-place > select {
             height: 100%;
             width: 100%;
             border: none;
-            padding-left: 10px;
             color: #333;
             outline: none;
             background: transparent;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .hero > .input > .place > .icon-input {
             display: flex;
             align-items: center;
-            height: 54px;
-            flex: 1.5 1 260px;
-            border-radius: 12px;
+            height: 56px;
+            flex: 1.5 1 270px;
+            border-radius: 14px;
             background-color: white;
-            padding: 0 15px;
-            position: relative;
+            padding: 0 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
 
         .hero > .input > .place > .icon-input > input {
@@ -182,31 +184,33 @@
             border: none;
             color: #333;
             outline: none;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .hero > .input > .place > .icon-input > i {
             color: #888;
             font-size: 16px;
+            margin-left: 10px;
         }
 
+        /* --- 3 MAIN CARDS --- */
         .food-card {
             display: flex;
             justify-content: center;
-            gap: clamp(12px, 2vw, 25px);
-            margin: 20px auto;
-            width: 92%;
-            max-width: 1100px;
+            gap: clamp(14px, 2.5vw, 30px);
+            margin: 25px auto 10px auto;
+            width: min(94%, 1100px);
             flex-wrap: wrap;
             z-index: 2;
         }
 
         .food-card > .main-card {
-            flex: 1 1 260px;
-            max-width: 330px;
-            aspect-ratio: 1 / 1;
-            border-radius: 14px;
+            flex: 1 1 280px;
+            max-width: 340px;
+            border-radius: 18px;
             overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            background-color: #fff;
         }
 
         .food-card > .main-card > img {
@@ -217,24 +221,25 @@
         }
 
         .bar {
-            height: 12px;
+            height: 10px;
             width: min(92%, 1065px);
-            background-color: white;
-            margin: 20px auto 10px auto;
-            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.4);
+            margin: 25px auto 0 auto;
+            border-radius: 5px;
         }
 
+        /* --- CONTENT SECTIONS --- */
         .order-food, .instamart-section, .dineout, .cities-section {
-            margin: 60px auto 0 auto;
-            width: min(92%, 1076px);
+            margin: 50px auto 0 auto;
+            width: min(92%, 1100px);
             display: flex;
             flex-direction: column;
         }
 
         .order-food > .des, .instamart-section > .des, .dineout > .des, .cities-section > .des {
-            font-size: clamp(20px, 2.2vw, 26px);
+            font-size: clamp(20px, 2.4vw, 26px);
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             color: #02060c;
         }
 
@@ -243,8 +248,9 @@
             flex-direction: column;
             overflow-x: auto;
             width: 100%;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
             scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
         }
 
         .food::-webkit-scrollbar, .grocery::-webkit-scrollbar, .hotel::-webkit-scrollbar {
@@ -253,97 +259,264 @@
 
         .menu-row, .row, .grocery-row {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             width: max-content;
         }
 
+        /* Dish Items */
         .food-item {
-            width: 135px;
+            width: 140px;
             height: 180px;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
+            background-color: #f7f7f7;
+            border-radius: 12px;
             flex-shrink: 0;
+            cursor: pointer;
         }
 
+        .dish1 { background-image: url('./swiggy/dish1.png'); }
+        .dish2 { background-image: url('./swiggy/dish2.png'); }
+        .dish3 { background-image: url('./swiggy/dish3.png'); }
+        .dish4 { background-image: url('./swiggy/dish4.png'); }
+        .dish5 { background-image: url('./swiggy/dish5.png'); }
+        .dish6 { background-image: url('./swiggy/dish6.png'); }
+        .dish7 { background-image: url('./swiggy/dish7.png'); }
+        .dish8 { background-image: url('./swiggy/dish8.png'); }
+        .dish9 { background-image: url('./swiggy/dish9.png'); }
+        .dish10 { background-image: url('./swiggy/dish10.png'); }
+        .dish11 { background-image: url('./swiggy/dish11.png'); }
+        .dish12 { background-image: url('./swiggy/dish12.png'); }
+        .dish13 { background-image: url('./swiggy/dish13.png'); }
+        .dish14 { background-image: url('./swiggy/dish14.png'); }
+        .dish15 { background-image: url('./swiggy/dish15.png'); }
+        .dish16 { background-image: url('./swiggy/dish16.png'); }
+        .dish17 { background-image: url('./swiggy/dish17.png'); }
+        .dish18 { background-image: url('./swiggy/dish18.png'); }
+        .dish19 { background-image: url('./swiggy/dish19.png'); }
+        .dish20 { background-image: url('./swiggy/dish20.png'); }
+
+        /* Grocery Items */
         .grocery-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex-shrink: 0;
+            width: 155px;
         }
 
         .grocery-item {
             width: 150px;
-            height: 220px;
-            background-size: cover;
+            height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
             background-position: center;
-            border-radius: 20px;
+            background-color: #f8f8f8;
+            border-radius: 18px;
         }
 
+        .grocery1 { background-image: url('./swiggy/grocery1.png'); }
+        .grocery2 { background-image: url('./swiggy/grocery2.png'); }
+        .grocery3 { background-image: url('./swiggy/grocery3.png'); }
+        .grocery4 { background-image: url('./swiggy/grocery4.png'); }
+        .grocery5 { background-image: url('./swiggy/grocery5.png'); }
+        .grocery6 { background-image: url('./swiggy/grocery6.png'); }
+        .grocery7 { background-image: url('./swiggy/grocery7.png'); }
+        .grocery8 { background-image: url('./swiggy/grocery8.png'); }
+        .grocery9 { background-image: url('./swiggy/grocery9.png'); }
+        .grocery10 { background-image: url('./swiggy/grocery10.png'); }
+        .grocery11 { background-image: url('./swiggy/grocery11.png'); }
+        .grocery12 { background-image: url('./swiggy/grocery12.png'); }
+        .grocery13 { background-image: url('./swiggy/grocery13.png'); }
+        .grocery14 { background-image: url('./swiggy/grocery14.png'); }
+        .grocery15 { background-image: url('./swiggy/grocery15.png'); }
+        .grocery16 { background-image: url('./swiggy/grocery16.png'); }
+        .grocery17 { background-image: url('./swiggy/grocery17.png'); }
+        .grocery18 { background-image: url('./swiggy/grocery18.png'); }
+        .grocery19 { background-image: url('./swiggy/grocery19.png'); }
+        .grocery20 { background-image: url('./swiggy/grocery20.png'); }
+        .grocery21 { background-image: url('./swiggy/grocery21.png'); }
+        .grocery22 { background-image: url('./swiggy/grocery22.png'); }
+        .grocery23 { background-image: url('./swiggy/grocery23.png'); }
+        .grocery24 { background-image: url('./swiggy/grocery24.png'); }
+
+        .grocery-hotel-name {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #02060c;
+            text-align: center;
+        }
+
+        /* Dineout Cards */
         .card {
-            width: 340px;
+            width: 350px;
             background: #ffffff;
-            border-radius: 24px;
-            border: 1px solid rgb(216, 207, 207);
+            border-radius: 20px;
+            border: 1px solid #e8e8e8;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-color: #eee;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+        }
+
+        .d1 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine1.png'); }
+        .d2 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine2.png'); }
+        .d3 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine3.png'); }
+        .d4 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine4.png'); }
+        .d5 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine5.png'); }
+        .d6 { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent), url('./swiggy/dine6.png'); }
+
+        .hotel-review {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: white;
+        }
+
+        .hotel-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .rating {
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            background-color: #1ba672;
+        }
+
+        .details {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #686b78;
+        }
+
+        .hotel-location {
+            font-size: 13px;
+            color: #686b78;
+            margin-bottom: 4px;
+        }
+
+        .offer {
+            background-color: #e3f8f1;
+            color: #1ba672;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-offer {
+            background-color: #e6fcf5;
+            color: #0ca678;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .extra {
+            font-size: 12px;
+            color: #535665;
+            font-weight: 600;
         }
 
         .app-banner {
             margin: 40px auto;
-            width: min(92%, 1076px);
-            height: 180px;
+            width: min(92%, 1100px);
+            height: clamp(140px, 20vw, 220px);
             background-size: cover;
             background-position: center;
-            border-radius: 16px;
+            border-radius: 20px;
             background-image: url('./swiggy/dowmload.png');
         }
 
         .cities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
             width: 100%;
         }
 
         .city-food {
             min-height: 56px;
-            border: 1px solid #d4d5d9;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px;
+            padding: 14px;
             font-size: 14px;
             color: #3d4152;
             text-align: center;
+            font-weight: 500;
+        }
+
+        .show-more-box {
+            color: #ff5200;
+            font-weight: 700;
         }
 
         footer {
-            min-height: 60vh;
+            min-height: 50vh;
             background-color: #F0F0F5;
-            padding: 40px 20px;
+            padding: 50px 20px 30px 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
+            margin-top: 40px;
         }
 
         footer > .link {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
             gap: 30px;
             max-width: 1100px;
             margin: 0 auto;
             width: 100%;
         }
 
+        footer > .link > .doc > a {
+            text-decoration: none;
+            color: #616469;
+            font-size: 14px;
+        }
+
         footer > .footer-separator {
             height: 1px;
-            width: min(92%, 1000px);
-            background-color: #ccc;
+            width: min(92%, 1100px);
+            background-color: #ddd;
             margin: auto;
         }
 
@@ -356,8 +529,17 @@
             text-align: center;
         }
 
-        /* Responsive Breakpoint for Mobile/Tablet */
-        @media (max-width: 850px) {
+        footer > .store > .box1 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        footer > .store > .box2 img {
+            height: 42px;
+            width: auto;
+        }
+
+        @media (max-width: 900px) {
             #li, #ri {
                 display: none;
             }
@@ -366,17 +548,16 @@
             }
         }
     </style>
-
 </head>
 
 <body>
     <div class="main">
         <header>
-            <img src="./swiggy/loggo.png" alt="">
+            <img src="./swiggy/loggo.png" alt="Swiggy">
             <nav>
                 <div class="nav-sec">
-                    <a href="">Swiggy Corporate</a>
-                    <a href="">Partner with us</a>
+                    <a href="#">Swiggy Corporate</a>
+                    <a href="#">Partner with us</a>
                     <button id="getapp">Get The App</button>
                     <button id="signin">Sign In</button>
                 </div>
@@ -385,7 +566,9 @@
         <div class="hero">
             <img src="./swiggy/left.png" alt="" id="li">
             <div class="input">
-                <div class="about"><span>Order food & groceries. Discover</span> <span> best restaurants. Swiggy it!</span>
+                <div class="about">
+                    <span>Order food & groceries. Discover</span>
+                    <span>best restaurants. Swiggy it!</span>
                 </div>
                 <div class="place">
                     <div class="icon-place">
@@ -401,18 +584,19 @@
                     </div>
                 </div>
             </div>
-
             <img src="./swiggy/right.png" alt="" id="ri">
-
         </div>
+
         <div class="food-card">
-            <div class="main-card c1"><img src="./swiggy/card1.png" alt=""></div>
-            <div class="main-card c2"><img src="./swiggy/card2.png" alt=""></div>
-            <div class="main-card c3"><img src="./swiggy/card3.png" alt=""></div>
+            <div class="main-card"><img src="./swiggy/card1.png" alt="Food Delivery"></div>
+            <div class="main-card"><img src="./swiggy/card2.png" alt="Instamart"></div>
+            <div class="main-card"><img src="./swiggy/card3.png" alt="Dineout"></div>
         </div>
 
         <div class="bar"></div>
     </div>
+
+    <!-- ORDER FOOD SECTION -->
     <div class="order-food">
         <div class="des">Order our best food options</div>
         <div class="food">
@@ -428,8 +612,7 @@
                 <div class="food-item dish9"></div>
                 <div class="food-item dish10"></div>
             </div>
-
-            <div class="menu-row">
+            <div class="menu-row" style="margin-top: 15px;">
                 <div class="food-item dish11"></div>
                 <div class="food-item dish12"></div>
                 <div class="food-item dish13"></div>
@@ -443,114 +626,33 @@
             </div>
         </div>
     </div>
+
+    <!-- INSTAMART SECTION -->
     <div class="instamart-section">
         <div class="des">Shop groceries on Instamart</div>
         <div class="grocery">
             <div class="grocery-row">
-                <div class="grocery-card">
-                    <div class="grocery-item grocery1"></div>
-                    <div class="grocery-hotel-name">Fresh vegetables</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery2"></div>
-                    <div class="grocery-hotel-name">Fresh fruits</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery3"></div>
-                    <div class="grocery-hotel-name">Dairy, bread, eggs</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery4"></div>
-                    <div class="grocery-hotel-name">Raita, atta, and dals</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery5"></div>
-                    <div class="grocery-hotel-name">Masala and dry fruits</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery6"></div>
-                    <div class="grocery-hotel-name">Oil and ghee</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery7"></div>
-                    <div class="grocery-hotel-name">Munchies</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery8"></div>
-                    <div class="grocery-hotel-name">Sweet tooth</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery9"></div>
-                    <div class="grocery-hotel-name">Cold drinks and juices</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery10"></div>
-                    <div class="grocery-hotel-name">Biscuit and cakes</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery11"></div>
-                    <div class="grocery-hotel-name">Instant food and frozen food</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery12"></div>
-                    <div class="grocery-hotel-name">Meat and seafood</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery13"></div>
-                    <div class="grocery-hotel-name">Cereals and breakfast</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery14"></div>
-                    <div class="grocery-hotel-name">Sauces and spread</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery15"></div>
-                    <div class="grocery-hotel-name">Tea, coffee, and more</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery16"></div>
-                    <div class="grocery-hotel-name">Cleaning essentials</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery17"></div>
-                    <div class="grocery-hotel-name">Pharma and hygiene</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery18"></div>
-                    <div class="grocery-hotel-name">Bath, beauty, and hair</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery19"></div>
-                    <div class="grocery-hotel-name">Pan corner</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery20"></div>
-                    <div class="grocery-hotel-name">Home and kitchen</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery21"></div>
-                    <div class="grocery-hotel-name">Office and electricals</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery22"></div>
-                    <div class="grocery-hotel-name">Baby care</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery23"></div>
-                    <div class="grocery-hotel-name">Pet supplies</div>
-                </div>
-                <div class="grocery-card">
-                    <div class="grocery-item grocery24"></div>
-                    <div class="grocery-hotel-name">Beauty and grooming</div>
-                </div>
+                <div class="grocery-card"><div class="grocery-item grocery1"></div><div class="grocery-hotel-name">Fresh vegetables</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery2"></div><div class="grocery-hotel-name">Fresh fruits</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery3"></div><div class="grocery-hotel-name">Dairy, bread, eggs</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery4"></div><div class="grocery-hotel-name">Raita, atta, and dals</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery5"></div><div class="grocery-hotel-name">Masala & dry fruits</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery6"></div><div class="grocery-hotel-name">Oil and ghee</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery7"></div><div class="grocery-hotel-name">Munchies</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery8"></div><div class="grocery-hotel-name">Sweet tooth</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery9"></div><div class="grocery-hotel-name">Cold drinks & juices</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery10"></div><div class="grocery-hotel-name">Biscuits & cakes</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery11"></div><div class="grocery-hotel-name">Instant & frozen food</div></div>
+                <div class="grocery-card"><div class="grocery-item grocery12"></div><div class="grocery-hotel-name">Meat & seafood</div></div>
             </div>
         </div>
     </div>
+
+    <!-- DINEOUT SECTION -->
     <div class="dineout">
         <div class="des">Discover best restaurants on Dineout</div>
         <div class="hotel">
             <div class="row">
-
                 <!-- Card 1 -->
                 <div class="card">
                     <div class="card-img d1">
@@ -560,15 +662,9 @@
                         </div>
                     </div>
                     <div class="details">
-                        <div class="info">
-                            <div>Desserts • Beverages</div>
-                            <div>₹500 for two</div>
-                        </div>
+                        <div class="info"><div>Desserts • Beverages</div><div>₹500 for two</div></div>
                         <div class="hotel-location">UB City, Vittal Mallya Road, Bangalore • 2 km</div>
-                        <div class="offer">
-                            <div>Flat 35% off on pre-booking</div>
-                            <div>+ 4 more</div>
-                        </div>
+                        <div class="offer"><div>Flat 35% off on pre-booking</div><div>+ 4 more</div></div>
                         <div class="bank-offer">Up to 10% off with bank offers</div>
                         <div class="extra">Get extra ₹100 off using PAYTMUPI</div>
                     </div>
@@ -583,15 +679,9 @@
                         </div>
                     </div>
                     <div class="details">
-                        <div class="info">
-                            <div>Bar food</div>
-                            <div>₹1500 for two</div>
-                        </div>
+                        <div class="info"><div>Bar food</div><div>₹1500 for two</div></div>
                         <div class="hotel-location">Ashok Nagar, Bangalore • 1.1 km</div>
-                        <div class="offer">
-                            <div>Flat 30% off on pre-booking</div>
-                            <div>+ 3 more</div>
-                        </div>
+                        <div class="offer"><div>Flat 30% off on pre-booking</div><div>+ 3 more</div></div>
                         <div class="bank-offer">Up to 10% off with bank offers</div>
                         <div class="extra">Get extra ₹100 off using PAYTMUPI</div>
                     </div>
@@ -606,13 +696,10 @@
                         </div>
                     </div>
                     <div class="details">
-                        <div class="info">
-                            <div>Desserts</div>
-                            <div>₹800 for two</div>
-                        </div>
+                        <div class="info"><div>Desserts</div><div>₹800 for two</div></div>
                         <div class="hotel-location">UB City, Vittal Mallya Road, Bangalore • 1.1 km</div>
-                        <div class="bank-offer" style="margin-top: 4px;">Up to 10% off with bank offers</div>
-                        <div class="extra" style="margin-top: 10px;">Get extra ₹100 off using PAYTMUPI</div>
+                        <div class="bank-offer">Up to 10% off with bank offers</div>
+                        <div class="extra">Get extra ₹100 off using PAYTMUPI</div>
                     </div>
                 </div>
 
@@ -625,66 +712,20 @@
                         </div>
                     </div>
                     <div class="details">
-                        <div class="info">
-                            <div>North Indian • Beverages</div>
-                            <div>₹1200 for two</div>
-                        </div>
+                        <div class="info"><div>North Indian • Beverages</div><div>₹1200 for two</div></div>
                         <div class="hotel-location">Radisson Blu Atria Bengaluru... • 1.5 km</div>
-                        <div class="bank-offer" style="margin-top: 4px;">Up to 10% off with bank offers</div>
-                        <div class="extra" style="margin-top: 10px;">Get extra ₹100 off using PAYTMUPI</div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="card">
-                    <div class="card-img d5">
-                        <div class="hotel-review">
-                            <div class="hotel-name">Tushita</div>
-                            <div class="rating">★ 3.7</div>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <div class="info">
-                            <div>Continental • Asian</div>
-                            <div>₹2000 for two</div>
-                        </div>
-                        <div class="hotel-location">Ashok Nagar, Bangalore • 1.8 km</div>
-                        <div class="offer">
-                            <div>Flat 15% off on walk-in</div>
-                            <div>+ 1 more</div>
-                        </div>
                         <div class="bank-offer">Up to 10% off with bank offers</div>
                         <div class="extra">Get extra ₹100 off using PAYTMUPI</div>
                     </div>
                 </div>
-
-                <!-- Card 6 -->
-                <div class="card">
-                    <div class="card-img d6">
-                        <div class="hotel-review">
-                            <div class="hotel-name">The Roof Asian Grill...</div>
-                            <div class="rating">★ 4.2</div>
-                        </div>
-                    </div>
-                    <div class="details">
-                        <div class="info">
-                            <div>Asian • Grill</div>
-                            <div>₹1600 for two</div>
-                        </div>
-                        <div class="hotel-location">Ashok Nagar, Bangalore • 1.1 km</div>
-                        <div class="offer">
-                            <div>Flat 30% off on pre-booking</div>
-                            <div>+ 3 more</div>
-                        </div>
-                        <div class="bank-offer">Up to 10% off with bank offers</div>
-                        <div class="extra">Get extra ₹100 off using PAYTMUPI</div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
+
+    <!-- APP BANNER -->
     <div class="app-banner"></div>
+
+    <!-- CITIES SECTION -->
     <div class="cities-section">
         <div class="des">Cities with food delivery</div>
         <div class="cities-grid">
@@ -695,70 +736,46 @@
             <div class="city-food">Order food online in Mumbai</div>
             <div class="city-food">Order food online in Pune</div>
             <div class="city-food">Order food online in Kolkata</div>
-            <div class="city-food">Order food online in Chennai</div>
-            <div class="city-food">Order food online in Ahmedabad</div>
-            <div class="city-food">Order food online in Chandigarh</div>
-            <div class="city-food">Order food online in Jaipur</div>
-            <div class="city-food show-more-box">Show More </div>
+            <div class="city-food show-more-box">Show More ▾</div>
         </div>
     </div>
+
+    <!-- FOOTER -->
     <footer>
         <div class="link">
             <div class="doc doclin1">
-                <img src="./swiggy/loggo2.png" alt=""><br>
+                <img src="./swiggy/loggo2.png" alt="Swiggy" style="height:40px;"><br><br>
                 © 2026 Swiggy Limited
             </div>
             <div class="doc doclin2">
                 <h4>Company</h4><br>
-                <a href="">About us</a><br><br>
-                <a href="">Swiggy Corporate</a><br><br>
-                <a href="">Careers</a><br><br>
-                <a href="">Team</a><br><br>
-                <a href="">Swiggy One</a><br><br>
-                <a href="">Swiggy Instamart</a><br><br><br>
+                <a href="#">About us</a><br><br>
+                <a href="#">Swiggy Corporate</a><br><br>
+                <a href="#">Careers</a><br><br>
+                <a href="#">Team</a>
             </div>
             <div class="doc doclin3">
-                <h4>Contact us:</h4><br>
-                <a href="">Help & Support</a><br><br>
-                <a href="">Partner with us</a><br><br>
-                <a href="">Ride with us</a><br><br>
-                <h4>Legal</h4><br>
-                <a href="">Terms and condition</a><br><br>
-                <a href="">Cookie Policy</a><br><br>
-                <a href="">Privacy Policy</a><br>
+                <h4>Contact us</h4><br>
+                <a href="#">Help & Support</a><br><br>
+                <a href="#">Partner with us</a><br><br>
+                <a href="#">Ride with us</a>
             </div>
             <div class="doc doclin4">
-                <h4>Available in:</h4><br>
-                <a href="">Bangalore</a><br><br>
-                <a href="">Gurgaon</a><br><br>
-                <a href="">Hyderabad</a><br><br>
-                <a href="">Delhi</a><br><br>
-                <a href="">Mumbai</a><br><br>
-                <a href="">Pune</a><br><br><br>
-            </div>
-            <div class="doc doclin5">
-                <h4>Life at Swiggy</h4><br>
-                <a href="">Explore with swiggy</a><br><br>
-                <a href="">Swiggy News</a><br><br>
-                <a href="">Snackables</a><br><br><br><br><br>
-                <h4>Social Links</h4><br>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-square-twitter"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-instagram"></i><br><br>
+                <h4>Available in</h4><br>
+                <a href="#">Bangalore</a><br><br>
+                <a href="#">Hyderabad</a><br><br>
+                <a href="#">Delhi</a><br><br>
+                <a href="#">Mumbai</a>
             </div>
         </div>
         <div class="footer-separator"></div>
-
         <div class="store">
-            <div class="box1">For better experience, download the Swiggy app now
-            </div>
+            <div class="box1">For better experience, download the Swiggy app now</div>
             <div class="box2">
-                <img src="./swiggy/apple.png" alt="">
-                <img src="./swiggy/playstore.png" alt="">
+                <img src="./swiggy/apple.png" alt="App Store">
+                <img src="./swiggy/playstore.png" alt="Google Play">
             </div>
         </div>
     </footer>
 </body>
-
 </html>
